@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Dish Profile";
+}
+@model Dish;
+
+<a href="/" class="btn btn-primary">Home</a>
+
+<div class="row">
+    <div class="offset-sm-3 col-sm-4">
+        <div class="card">
+            <h1 class="card-title">@ViewBag.OneDish.Name</h1>
+            <div class="card-body">
+                <h3>By: @ViewBag.OneDish.Chef</h3>
+                <p>@ViewBag.OneDish.Description</p>
+                <p>Calories: @ViewBag.OneDish.Calories</p>
+                <p>Tastiness: @ViewBag.OneDish.Tastiness</p>
+            </div>
+        </div>
+        <a href="/dish/@Model.DishId/edit" class="btn btn-warning btn-outline-dark">Edit Dish</a>
+        <a href="/dish/@Model.DishId/remove" class="btn btn-danger">Remove</a> //ACHOR TAGS ARE AWLAYS GET
+    </div>
+</div>
